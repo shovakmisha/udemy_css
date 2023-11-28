@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>clip path circle</title>
+    <style>
+        img {
+            width: 40%;
+        }
+
+        .image {
+            /* 20% - це радіус
+            Тут принцип дії такий. Береться картинка (досить велика), їй вказується радіус - це буде маленьке віконце через яке можна буде дивити картинку
+            60% 60% - це осі x y через які можна совати це віконце */
+            clip-path: circle(20% at 60% 60%);
+        }
+
+        .image2 {
+            clip-path: circle(40% at 100% 50%);
+        }
+    </style>
+</head>
+<body>
+    <img src="888.jpg" alt="" class="image">
+    <img src="888.jpg" alt="" class="image2">
+</body>
+</html>

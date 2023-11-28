@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>spining image album</title>
+	<style>
+		.images {
+			height: 300px;
+            max-width: 60%;
+            background-color: darkgoldenrod;
+			margin: 200px auto;
+		}
+
+		.spinner {
+			position: relative;
+            perspective: 200px;
+		}
+
+		.spinner img {
+            width: 400px;
+			height: 300px;
+			position: absolute;
+			padding-inline: 160px;
+            /* В 3d просторі transform-origin грає новими фарбами. 3-тя ось - це Z. Маніпуляції transform-origin нічого не дадуть, поки transform: rotateY(0deg);
+            Треба щоб була хоч якась трансформація. 2-8 картинки мають трансформація. perspective: 200px; для spinner прояснить ситуацію. Стане видно, що
+            rotateY для картинок буде крутити картинки навколо осі Z, тобно радіусом 600px */
+            transform-origin: center center -600px;
+		}
+
+        .spinner img:nth-child(1) {
+			transform: rotateY(0deg);
+		}
+        .spinner img:nth-child(2) {
+            transform: rotateY(-45deg);
+        }
+        .spinner img:nth-child(3) {
+            transform: rotateY(-90deg);
+        }
+        .spinner img:nth-child(4) {
+            transform: rotateY(-135deg);
+        }
+        .spinner img:nth-child(5) {
+            transform: rotateY(-180deg);
+        }
+        .spinner img:nth-child(6) {
+            transform: rotateY(-225deg);
+        }
+        .spinner img:nth-child(7) {
+            transform: rotateY(-270deg);
+        }
+        .spinner img:nth-child(8) {
+            transform: rotateY(-315deg);
+        }
+
+	</style>
+</head>
+<body>
+	<section class="images">
+		<div class="spinner">
+			<img src="img/1.jpeg" alt="">
+			<img src="img/2.jpeg" alt="">
+
+		</div>
+	</section>
+</body>
+</html>

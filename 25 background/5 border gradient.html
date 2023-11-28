@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div {
+            font-size: 5em;
+            background-color: darkgoldenrod;
+            margin-bottom: 15px;
+            text-align: center;
+            height: 5em;
+            width: 10em;
+            line-height: 5em;
+        }
+
+        .border-gradient-1 {
+            border: 30px solid;
+
+            /* ці 2 рядки можна замінити одним - border-image: linear-gradient(magenta, royalblue, gold) 1; */
+            border-image-source: linear-gradient(magenta, royalblue, gold);
+            border-image-slice: 1; /* Якщо тут буде 0, то градієнти будуть кубиками по 4 сторони діва */
+        }
+
+        .border-gradient-2 {
+            border: 30px solid transparent;
+            background: linear-gradient(darkgoldenrod, darkgoldenrod) padding-box,
+                        linear-gradient(magenta, royalblue, gold) border-box;
+        }
+    </style>
+</head>
+<body>
+    <div class="border-gradient-1">
+        excellence
+    </div>
+    <div class="border-gradient-2">
+        Greatness
+    </div>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>3D transform</title>
+    <style>
+        .translate {
+            border: 3px solid blue;
+            width: 200px;
+            height: 200px;
+            font-size: 20px;
+            text-align: center;
+            margin-bottom: 50px;
+            /* Перспектива - це як око бачить обєкт. Чим більша перспектива, там далі обєкт */
+            perspective: 400px;
+        }
+
+        .child-t {
+            background-color: blueviolet;
+            width: 150px;
+            height: 150px;
+            margin-left: 20px;
+        }
+
+        .child-t:hover {
+            transform: translateZ(2em); /* приблизить обєкт */
+        }
+
+
+        .rotate {
+            background-color: crimson;
+            width: 200px;
+            height: 200px;
+            font-size: 20px;
+            text-align: center;
+            /* будет начинаться в левом верхнем углу, проходить через центр и заканчиваться в правом нижнем углу элемента.
+            Схематически его можно представить как стрелку, пронзающую прямоугольник элемента под углом 45° сверху вниз. */
+            transform: rotate3d(1, 1, 0, 45deg);
+        }
+        .rotate2 {
+            background-color: crimson;
+            width: 200px;
+            height: 200px;
+            font-size: 20px;
+            text-align: center;
+            transform: rotate3d(2, 1, 0, 45deg);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="translate">
+        <p class="child-t">translate</p>
+    </div>
+    <div class="rotate">
+        <p>rotate</p>
+    </div>
+    <div class="rotate2">
+        <p>rotate2</p>
+    </div>
+</body>
+</html>

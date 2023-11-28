@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>bouncing onject</title>
+	<style>
+		.ball {
+			display: inline-block;
+			width: 100px;
+			height: 100px;
+            background-color: crimson;
+            border-radius: 50%;
+            /* forwards по дефолту, але є ще й backwards. Він відрізняється тим, що повертає фігури в початок анімації (після закінчення анімації) */
+			animation: bounce 4s ease 3 forwards; /* Є ще both. Він ідентичний  forwards */
+		}
+
+        .ball2 {
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            background-color: crimson;
+            border-radius: 50%;
+            animation: bounce 4s ease 3 reverse; /* reverse - анімація працює навпаки. В даному випадку мяч повільно йде знизу вверх. forwards по дефолту */
+        }
+
+        .ball3 {
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            background-color: crimson;
+            border-radius: 50%;
+            animation: bounce 4s ease 3 alternate; /* Також можна задати alternate.  Тоді мяч буде анімовано підніматись і спускатись */
+        }
+
+        .ball4 {
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            background-color: blueviolet;
+            border-radius: 50%;
+            animation: bounce 4s ease 3 alternate-reverse;
+        }
+
+		@keyframes bounce {
+			from {
+				transform: translateY(0);
+			}
+			to {
+            	transform: translateY(450px);
+			}
+        }
+	</style>
+</head>
+<body>
+	<div class="ball">forward</div>
+	<div class="ball2">reverse</div>
+	<div class="ball3">alternate</div>
+	<div class="ball4">alternate-reverse</div>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        /* table-layout: fixed;  */
+        table {
+            table-layout: fixed;
+            width: 600px; /* Тепер, коли table-layout: fixed; якщо в ячейці дуже багато контенту, він вилізе з ячейки */
+            border-collapse: collapse;
+        }
+
+        td {
+            padding: 10px;
+            border: 1px solid black;
+        }
+
+        .color {
+            border: 5px solid #69c; /* Рамка буде тільки в режимі border-collapse: collapse; */
+            background-color: #ccf;
+        }
+
+        .middle {
+            background-color: #cfc;
+        }
+
+        .bottom {
+            border: 10px solid crimson; /* Рамка буде тільки в режимі border-collapse: collapse; */
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <caption>Заголовок</caption>
+
+        <col span="4" width="100"> <!-- для перших 4-х -->
+        <col span="1" width="200" class="color"> <!-- для перших 5-го -->
+        <col span="5" width="70"> <!-- для останніх 5-х -->
+
+        <thead>
+            <tr>
+                <td>head 1</td>
+                <td>head 2</td>
+                <td>head 3</td>
+                <td>head 4</td>
+                <td>head 5</td>
+                <td>head 6</td>
+                <td>head 7</td>
+                <td>head 8</td>
+                <td>head 9</td>
+                <td>head 10</td>
+            </tr>
+        </thead>
+        <tfoot>
+            <tr>
+                <td>foot 1</td>
+                <td>foot 2</td>
+                <td>foot 3</td>
+                <td>foot 4</td>
+                <td>foot 5</td>
+                <td>foot 6</td>
+                <td>foot 7</td>
+                <td>foot 8</td>
+                <td>foot 9</td>
+                <td>foot 10</td>
+            </tr>
+        </tfoot>
+        <tbody class="middle">
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>
+                <td>6</td>
+                <td>7</td>
+                <td>8</td>
+                <td>9</td>
+                <td>10</td>
+            </tr>
+        </tbody>
+        <tbody class="bottom">
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+            <td>10</td>
+        </tr>
+        </tbody>
+    </table>
+</body>
+</html>

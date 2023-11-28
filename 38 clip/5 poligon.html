@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>polygon</title>
+    <style>
+
+        /* Перед цим треба знати, що
+         0% 0%   - це left top
+         0% 100% - це left bottom
+         100% 0% - це right top
+         100% 100% - це right bottom */
+
+        img {
+            width: 70%;
+        }
+
+        .image1 {
+            clip-path: polygon(0 0, 100% 100%, 0% 100%); /* top-left, bottom-right, bottom-left */
+        }
+
+        .image2 {
+            clip-path: polygon(50% 0, 100% 100%, 0% 100%); /* трикутник. Задаю 3 значення з 4-х - це завжди буде трикутник */
+        }
+
+        .image3 {
+            clip-path: polygon(50% 0, 60% 0, 100% 100%, 0% 100%); /* Чотирикутник */
+        }
+
+        .image4 {
+            clip-path: polygon(25% 0, 100% 0%, 75% 100%, 0% 100%); /* Паралелограм */
+        }
+
+        .image5 {
+            clip-path: polygon(50% 0, 100% 35%, 82% 100%, 18% 100%, 0 35%); /* Пятикутник. Тут 5 точок */
+        }
+    </style>
+</head>
+<body>
+    <img src="888.jpg" class="image1" alt="">
+
+    <img src="888.jpg" class="image2" alt="">
+
+    <img src="888.jpg" class="image3" alt="">
+
+    <img src="888.jpg" class="image4" alt="">
+
+    <img src="888.jpg" class="image5" alt="">
+</body>
+</html>

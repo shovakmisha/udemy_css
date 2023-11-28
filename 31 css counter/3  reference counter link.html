@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> reference counter link</title>
+    <style>
+        /* counter for links */
+        body {
+            counter-reset: links;
+        }
+        sup::before {
+            counter-increment: links;
+            content: "["counter(links)"]"; /* Кароче це таке саме як на сайті Вікіпедія. Воно пройдеться по лінкам і наставить їм числові значення */
+        }
+        a {
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <p>World Health Organization <a href="#"><sup></sup></a></p>
+    <p>FIFA <a href="#"><sup></sup></a></p>
+    <p>Robert de Niro <a href="#"><sup></sup></a></p>
+</body>
+</html>

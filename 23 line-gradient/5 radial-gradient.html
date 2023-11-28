@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Radial gradient</title>
+  <style>
+    .section1 {
+      background: radial-gradient(teal, hotpink, crimson);
+      height: 50vh;
+      margin-bottom: 20px;
+    }
+
+    /* Тут замість ключових слів - to top, to bottom, to right, ... використовуються circle, ellipse(по замовчуванню) */
+    .section2 {
+      background: radial-gradient(circle, teal, hotpink, crimson);
+      height: 50vh;
+      margin-bottom: 20px;
+    }
+
+    /* градиент имеет такую форму, что заканчивается у ближайшей к центру границы элемента.  Тобто я створюю градієнт в прямокутнику.
+    І задача градієнта дойти до ближчої сторони прямокутника. В центрі буде ядро через те, що йому немає сенсу розтягуватись до дальніх сторін прямокутника*/
+    .section3 {
+        background: radial-gradient(circle closest-side, teal, hotpink, crimson);
+        height: 50vh;
+        margin-bottom: 20px;
+    }
+
+    /* градиент заканчивается у дальней от центра границы элемента. Тут я поставив еліпс тому, що так більш логічно.
+    Задача farthest-side дотянутись до дальньої сторони прямокутника */
+    .section4 {
+        background: radial-gradient( farthest-side, teal, hotpink, crimson);
+        height: 50vh;
+        margin-bottom: 20px;
+    }
+
+    /* Є ще closest-corner i farthest-corner, вони мають розподілятись по кутах, але я не зрозумів як */
+
+
+    .section5 {
+      background: radial-gradient(at 25%, teal, hotpink, crimson);
+      height: 50vh;
+      margin-bottom: 20px;
+    }
+
+    /* at 60% 70% - це по горизонталі і по вертикалі */
+    .section6 {
+      background: radial-gradient(at 60% 70%, teal, hotpink, crimson);
+      height: 50vh;
+      margin-bottom: 20px;
+    }
+
+  </style>
+</head>
+<body>
+  <section class="section1">
+
+  </section>
+  <section class="section2">
+
+  </section>
+  <section class="section3">
+
+  </section>
+  <section class="section4">
+
+  </section>
+  <section class="section5">
+
+  </section>
+  <section class="section6">
+
+  </section>
+</body>
+</html>

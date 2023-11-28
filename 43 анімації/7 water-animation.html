@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>water-animation</title>
+	<style>
+		.water {
+            background-color: blueviolet;
+			height: 400px;
+			width: 400px;
+			border-radius: 50%;
+			margin: 70px auto;
+		}
+		.water::after, .water::before {
+			content: "";
+			position: absolute;
+			width: 400px;
+			height: 400px;
+            background-color: white;
+			top: -150px;
+			animation: wave 5s linear infinite;
+		}
+        .water::before {
+			border-radius: 45%;
+			opacity: .7;
+		}
+        .water::after {
+            border-radius: 35%;
+            opacity: .3;
+        }
+
+		@keyframes wave {
+			0% {
+				transform: rotate(0);
+			}
+			100% {
+				transform: rotate(360deg);
+			}
+        }
+	</style>
+</head>
+<body>
+	<div class="water"></div>
+</body>
+</html>

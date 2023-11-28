@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>clamp-function</title>
+    <style>
+
+        /*
+            1) тут передаються 3 значення. Середній привегільований
+            2) Якщо середній більший за 1-й, використовується середній
+            3) Якщо середній менший за 1-й, використовується 1-й
+
+        */
+        p {
+            font-size: clamp(60px, 50px, 170px);
+        }
+
+        /*
+            4) Якщо середній більший за 3-й, використовується 3-й
+        */
+        h1 {
+            width: clamp(40px, 300px, 250px);
+            background-color: teal;
+        }
+    </style>
+</head>
+<body>
+    <p>Hello</p>
+    <h1>Dance</h1>
+</body>
+</html>

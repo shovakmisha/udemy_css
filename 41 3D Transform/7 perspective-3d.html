@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Perspective  3d</title>
+    <style>
+        .section1 {
+            background-color: darkgray;
+            width: 300px;
+            height: 300px;
+            padding: 20px;
+            position: relative;
+        }
+        .div1 {
+            background-color: brown;
+            padding: 60px;
+            position: absolute;
+            /* це можна зрозуміти, тільки якщо покрутити в браузері. Це схоже на z-index. Це працює тільки коли давати це значення паренту
+               По суті це 2 елементи(батько і син) перекривають один одного в заледності від того куди покрутиш елемент */
+            transform-style: preserve-3d;
+
+        }
+        .div2 {
+            background-color: blueviolet;
+            padding: 60px;
+            position: absolute;
+            transform: rotateY(160deg);
+        }
+    </style>
+</head>
+<body>
+    <section class="section1">
+        <div class="div1">
+            parent
+            <div class="div2">
+                child
+            </div>
+        </div>
+    </section>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>rotate 3d</title>
+    <style>
+        .translate {
+            border: 3px solid blue;
+            width: 200px;
+            height: 200px;
+            font-size: 20px;
+            text-align: center;
+            margin-bottom: 50px;
+            perspective: 400px;
+            perspective-origin: left bottom;
+        }
+
+        .rotate {
+            background-color: crimson;
+            width: 200px;
+            height: 200px;
+            font-size: 20px;
+            text-align: center;
+            transform: rotate3d(3, 5, 2, 60deg); /* щоб не плутатись. Фгуру обертає значення 60deg, Осі x,y,z - це matrix3d в іншій обертці */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="translate">
+        <div class="rotate">
+            <p>rotate</p>
+        </div>
+    </div>
+
+</body>
+</html>

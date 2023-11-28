@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Repeating gradients</title>
+    <style>
+        section {
+            background-color: teal;
+            height: 10em;
+            width: 200px;
+        }
+
+        /* Тут буде 5 повторень через те, що teal 20% */
+        .gradient-1 {
+            background-image: repeating-linear-gradient(45deg, blue, rebeccapurple 10%, teal 20%);
+        }
+    </style>
+</head>
+<body>
+    <section class="gradient-1">
+        <h1>Wonderful</h1>
+    </section>
+    <section class="gradient-2">
+        <h1>Greatness</h1>
+    </section>
+</body>
+</html>

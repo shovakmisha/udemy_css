@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>transform</title>
+    <style>
+        .translate {
+            background-color: blueviolet;
+            width: 200px;
+            height: 200px;
+            font-size: 20px;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .translate:hover {
+            transform: translate(100px, 100px); /* посуне блок вправо і вниз на 100px */
+        }
+
+
+        .scale {
+            background-color: blueviolet;
+            width: 200px;
+            height: 200px;
+            font-size: 20px;
+            text-align: center;
+            /* Якщо вказати 2 значення, буде йти по 2-х осях. Я не знав, що є scaleX scaleY */
+            transform: scale(1.2, 1); /* Якщо вказати мінусове значення, блок перевернеться */
+        }
+
+
+        .rotate {
+            background-color: crimson;
+            width: 200px;
+            height: 200px;
+            font-size: 20px;
+            text-align: center;
+            transform: rotate(-5rad); /* 0.5turn 10deg. По дефолту rotateZ */
+            transform-origin: 150px 150px; /* Навколо цієї точки буде йти обертання */
+            /* transform: rotateX(50deg); віддалить верх приблизить низ. Але без перспективи. це 2д трансформація */
+        }
+
+
+        .skew {
+            background-color: crimson;
+            width: 200px;
+            height: 200px;
+            font-size: 20px;
+            text-align: center;
+            transform: skewX(20deg);
+            /* transform: skewY(20deg); */ /* skew(x,y) */
+        }
+
+
+        .matrix {
+            background-color: crimson;
+            width: 200px;
+            height: 200px;
+            font-size: 20px;
+            text-align: center;
+            /* matrix групує в собі всі попередні трансформації. Приймає 6 значень. Але це саме числові значення
+             scaleX, skewY, skewX, scaleY, translateX, translateY */
+            transform: matrix(1, 0, 1, 1, 44, 54)
+        }
+    </style>
+</head>
+<body>
+    <div class="translate">
+        <p>translate</p>
+    </div>
+
+    <div class="scale">
+        <p>scale</p>
+    </div>
+    <div class="rotate">
+        <p>rotate</p>
+    </div>
+    <div class="skew">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt, modi provident. Assumenda dolorum facere magni,</p>
+    </div>
+    <div class="matrix">
+        <p>matrix</p>
+    </div>
+</body>
+</html>

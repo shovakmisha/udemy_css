@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>var function gradients</title>
+    <style>
+
+        :root {
+            --conic: conic-gradient(teal, hotpink, crimson);
+            --height: 50vh;
+            --linear: linear-gradient(to left top, #d34, #f56, #ed7);
+            --radial: radial-gradient(circle at 95%, #de3, #345, #f56, #a23);
+        }
+
+        .section1 {
+            background: var(--conic);
+            height: var(--height);
+            margin-bottom: 20px;
+        }
+
+        .section2 {
+            background: var(--linear);
+            height: var(--height);
+            margin-bottom: 20px;
+        }
+
+        .section3 {
+            background: var(--radial);
+            height: var(--height);
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <section class="section1">
+
+    </section>
+    <section class="section2">
+
+    </section>
+    <section class="section3">
+
+    </section>
+</body>
+</html>

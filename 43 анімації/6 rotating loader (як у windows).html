@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>windows loader</title>
+	<style>
+		div {
+			width: 20px;
+			height: 20px;
+            border-radius: 50%;
+			box-shadow: 2px 3px 4px 1px darkgray;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+		}
+
+		div:nth-child(1) {
+            background-color: darkgoldenrod;
+			animation: rotate 2s linear infinite;
+		}
+        div:nth-child(2) {
+            background-color: pink;
+            animation: rotate 2s linear infinite 150ms;
+        }
+        div:nth-child(3) {
+            background-color: lime;
+            animation: rotate 2s linear infinite 300ms;
+        }
+        div:nth-child(4) {
+            background-color: teal;
+            animation: rotate 2s linear infinite 450ms;
+        }
+        div:nth-child(5) {
+            background-color: crimson;
+            animation: rotate 2s linear infinite 600ms;
+        }
+        div:nth-child(6) {
+            background-color: darkmagenta;
+            animation: rotate 2s linear infinite 750ms;
+        }
+
+		/* Цю фішку важко зрозуміти. rotateZ буде крутити елемент навколо всоєї осі. Але так як translateX(80px) змістив шарики вправо, центр осі шариків залишився вцентрі
+		 І тепер шарики крутяться навколо центра з радіусом 80px
+		 Якщо я хочу, щоб було як у windows, треба погратись з rotateZ(0deg). Саме він крутить шарики навколо осі Z */
+        @keyframes rotate {
+            from {
+                transform: rotateZ(0deg) translateX(80px);
+            }
+            to {
+                transform: rotateZ(360deg) translateX(80px);
+            }
+        }
+
+	</style>
+</head>
+<body>
+	<section>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+	</section>
+</body>
+</html>

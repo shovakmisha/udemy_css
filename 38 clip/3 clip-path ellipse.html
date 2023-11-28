@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>clip path ellipse</title>
+  <style>
+    img {
+      width: 70%;
+    }
+
+    .image2 {
+      /* Тут радіус задається двома значеннями */
+      clip-path: ellipse(40% 40% at 50% 50%);
+    }
+
+
+
+    .section1 {
+      background: linear-gradient(-60deg, red, brown);
+      display: flow-root;
+    }
+    .img1 {
+      width: 100%;
+    }
+
+    .div1, .div2 {
+      float: left;
+    }
+
+    .div1 {
+      width: 45%;
+      clip-path: circle(100% at 10% 15%);
+    }
+
+    .div2 {
+      width: 45%;
+      font-size: 25px;
+      color: white;
+      clip-path: ellipse(30% 30% at 40% 40%);
+    }
+  </style>
+</head>
+<body>
+
+<img src="888.jpg" alt="" class="image2">
+
+<section class="section1">
+  <div class="div2">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid asperiores expedita harum? Cum ducimus,
+      eos, expedita fuga laborum mollitia necessitatibus neque nisi officia perspiciatis porro rem sequi soluta
+      tempore veniam? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid asperiores expedita harum? Cum ducimus,
+      eos, expedita fuga laborum mollitia necessitatibus neque nisi officia perspiciatis porro rem sequi soluta
+      tempore veniam? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid asperiores expedita harum? Cum ducimus,
+      eos, expedita fuga laborum mollitia necessitatibus neque nisi officia perspiciatis porro rem sequi soluta
+      tempore veniam? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid asperiores expedita harum? Cum ducimus,
+      eos, expedita fuga laborum mollitia necessitatibus neque nisi officia perspiciatis porro rem sequi soluta
+      tempore veniam? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid asperiores expedita harum? Cum ducimus,
+      eos, expedita fuga laborum mollitia necessitatibus neque nisi officia perspiciatis porro rem sequi soluta
+      tempore veniam? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid asperiores expedita harum? Cum ducimus,
+      eos, expedita fuga laborum mollitia necessitatibus neque nisi officia perspiciatis porro rem sequi soluta
+      tempore veniam?
+    </p>
+  </div>
+  <div class="div1">
+    <img src="888.jpg" class="img1">
+  </div>
+</section>
+</body>
+</html>

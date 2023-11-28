@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>percentages</title>
+    <style>
+        .section1 {
+            background: linear-gradient(teal 70%, hotpink, crimson); /* hotpink, crimson автоматично стають по 15% */
+            height: 50vh;
+            margin-bottom: 20px;
+        }
+        .section2 {
+            /* Якщо б hotpink мав тільки одне значення, не було б брекпоінта з crimson. Було б лагідний перехід */
+            background: linear-gradient(teal 30%, hotpink 30%, hotpink 60%, crimson 60%);
+            height: 50vh;
+            margin-bottom: 20px;
+        }
+        .section3 {
+            /* З 30% teal і hotpink йдуть плавним переходом, а crimson з 50% стає з hotpink брекпоінтом. Тому, що 40% стає 50% (чому - дивити у попередньому файлі. В книжці це пояснювали) */
+            background: linear-gradient(teal 30%, hotpink 50%, crimson 40%);
+            height: 50vh;
+            margin-bottom: 20px;
+        }
+        .section4 {
+            /* Це взагалі суть як я зрозумів. Тут теж буде брекпоінт. Між teal 50% і hotpink 30%. hotpink не може починатись з 30%, так як цей простір займає teal(50%)
+             А як я вже знаю - 30% перетвориться на 50% - ось чому брекпоінт. Щоб був плавний перехід, мені треба вказати простір для нього. Наприклад hotpink 70%
+             І наскільки розмір буде більший між опорними точками, тим плавніший буде перехід. Типу якщо є 2 опорні точки, то це буде 0% і 100%*/
+            background: linear-gradient(teal 50%, hotpink 30%, crimson 90%);
+            height: 50vh;
+            margin-bottom: 20px;
+        }
+        .section5 {
+            /* Це теж суть як я зрозумів. Тут hotpink 30% теж проігнорується. У цьому випадку воно йде справа на ліво і crimson йде від 100% до 50% і створить брейкпоінт */
+            background: linear-gradient(teal 50%, hotpink 30%, crimson 20%);
+            height: 50vh;
+        }
+    </style>
+</head>
+<body>
+    <section class="section1">
+
+    </section>
+    <section class="section2">
+
+    </section>
+    <section class="section3">
+
+    </section>
+    <section class="section4">
+
+    </section>
+    <section class="section5">
+
+    </section>
+</body>
+</html>

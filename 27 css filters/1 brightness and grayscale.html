@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>brightness and grayscale</title>
+    <style>
+        .a-1 {
+            background: url("888.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100vh;
+
+            /* Якщо у відсотках, то буде від 0 до безкінечності. 100% - це дефолтне значення. Картинка буде як оригінал.
+            Далі піде пересвічування. Відсотки не обовязково вказувати. Можна просто 10 */
+            filter: brightness(50%);
+        }
+
+        .a-2 {
+            background: url("888.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100vh;
+
+            /* Те саме, що у brightness, але тут ефект буде як сепія. Кароче сіра картинка. Стоп на 100% */
+            filter: grayscale(80%);
+        }
+
+        .a-3 {
+            background: url("888.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100vh;
+
+            /* А це вже справжня сепія. Стоп на 100% */
+            filter: sepia(80%);
+        }
+
+        .a-4 {
+            background: url("888.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100vh;
+
+            /* Схоже на brightness тільки сіре */
+            filter: contrast(80%);
+        }
+
+        .a-5 {
+            background: url("888.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100vh;
+
+            /* Схоже на grayscale. 200% картинка буде перенасичена кольорами */
+            filter: saturate(80%);
+        }
+
+        .a-6 {
+            background: url("888.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100vh;
+
+            /* Заблюрює картинку */
+            filter: blur(80px);
+        }
+
+        .a-7 {
+            background: url("888.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100vh;
+
+            /* 0 - зробить фонову картинку прозорою. 100 - оригінальною */
+            filter: opacity(100); /* opacity(0.3) - цей запис теж коректний */
+        }
+
+        .a-8 {
+            background: url("888.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100vh;
+
+            /* градуси вказують на поворот відтінка який діє на фон */
+            filter: hue-rotate(60deg);
+        }
+
+        .a-9 {
+            background: url("888.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100vh;
+
+            /* хз. Теж якось дивно грається з відтінками */
+            filter: invert(60%);
+        }
+
+        .a-10 {
+            height: 100vh;
+            width: 50%;
+
+            /* 5px - по горизонталі, 7px - по вертикалі. 8px - це розмиття. Кароче це як box-shadow */
+            filter: drop-shadow(5px 7px 8px red);
+        }
+    </style>
+</head>
+<body>
+    <section class="a-1">
+
+    </section>
+    <section class="a-2">
+
+    </section>
+    <section class="a-3">
+
+    </section>
+    <section class="a-4">
+
+    </section>
+    <section class="a-5">
+
+    </section>
+    <section class="a-6">
+
+    </section>
+    <section class="a-7">
+
+    </section>
+    <section class="a-8">
+
+    </section>
+    <section class="a-9">
+
+    </section>
+    <section>
+        <img src="888.jpg"  class="a-10">
+    </section>
+
+</body>
+</html>

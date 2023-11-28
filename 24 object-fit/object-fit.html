@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>object fit</title>
+    <style>
+
+        /* object-fit: fill; - default */
+
+        .a img {
+            width: 500px;
+            height: 700px;
+            object-fit: fill;
+        }
+
+        /* object-fit: none; - розміщення по центру, краї обрізаються */
+        .b img {
+            width: 500px;
+            height: 700px;
+            object-fit: none;
+            object-position: top right; /* Можна комбінувати або роздільно left top bottom right center */
+        }
+
+        /* object-fit: none; - втиснення картинки в парент і пропорції зберігаються, залишаючи пустоту по краях */
+        .с img {
+            width: 500px;
+            height: 700px;
+            object-fit: contain;
+            object-position: top;
+            background-color: #a3364c; /* спеціально додав фон, щоб видно було пустоту */
+        }
+
+        /* object-fit: cover; - Те саме, що background: cover; */
+        .d img {
+            width: 500px;
+            height: 700px;
+            object-fit: cover;
+            object-position: top; /* left right center. Тут комбінування не працюють. */
+        }
+
+        /* object-fit: cover; - Те саме, що background: contain; */
+        .e img {
+            width: 500px;
+            height: 700px;
+            object-fit: scale-down;
+        }
+    </style>
+</head>
+<body>
+    <div class="a">
+        <img src="./888.jpg">
+    </div>
+    <div class="b">
+        <img src="./888.jpg">
+    </div>
+    <div class="с">
+        <img src="./888.jpg">
+    </div>
+    <div class="d">
+        <img src="./888.jpg">
+    </div>
+    <div class="e">
+        <img src="./888.jpg">
+    </div>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>css counter</title>
+    <style>
+        section {
+            counter-reset: word;
+            margin-bottom: 90px;
+        }
+
+        h2::before {
+            counter-increment: word;
+            content: counter(word) ". ";
+        }
+
+
+        article {
+            counter-reset: flakes 2 house 4; /* починаючи відлік з 2. Можна і 2 лічильники ставити (flakes, house) */
+            margin-bottom: 90px;
+        }
+
+        h1 {
+            color: blue;
+        }
+
+        h1::before {
+            counter-increment: flakes;
+            content: counter(flakes) ". ";
+        }
+
+        h4::before {
+            counter-increment: house 3; /* інкремент буде збільшуватись на 3 - 3,6,9 */
+            content: counter(house) ". ";
+        }
+
+
+        h3 {
+            color: crimson;
+        }
+        aside {
+            counter-reset: yikes;
+            margin-bottom: 90px;
+        }
+        h3::before {
+            counter-increment: yikes;
+            content: "Section " counter(yikes) ": ";
+        }
+
+
+        .decrement h3 {
+            color: crimson;
+        }
+        .decrement {
+            counter-reset: likes 10;
+        }
+        .decrement h3::before {
+            counter-increment: likes -1; /* 9,8,7,6,... Він буде віднімати -1 */
+            content: "Section " counter(likes) ": ";
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <h2>Great</h2>
+        <h2>Awesome</h2>
+        <h2>Brilliant</h2>
+        <h2>Good</h2>
+        <h2>Handsome</h2>
+        <h2>Beautiful</h2>
+    </section>
+
+    <article>
+        <h1>Good</h1>
+        <h1>Handsome</h1>
+        <h1>Beautiful</h1>
+    </article>
+
+    <article>
+        <h4>Great</h4>
+        <h4>Handsome</h4>
+        <h4>Awesome</h4>
+        <h4>Dreams</h4>
+        <h4>Home</h4>
+    </article>
+
+    <aside>
+        <h3>Grandeur</h3>
+        <h3>Home</h3>
+        <h3>Awesome</h3>
+        <h3>Beautiful</h3>
+    </aside>
+
+    <aside class="decrement">
+        <h3>Grandeur</h3>
+        <h3>Home</h3>
+        <h3>Awesome</h3>
+        <h3>Beautiful</h3>
+    </aside>
+</body>
+</html>

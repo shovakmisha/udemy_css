@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>percentages</title>
+    <style>
+        .section2 {
+            /* Як я бачу по браузеру, до 25% йде чорна заливка, від 25% до 75% йде градієнт, від 75% червона заливка*/
+            background: linear-gradient(to right, #000 25%, red 75%);
+            height: 50vh;
+            margin-bottom: 20px;
+        }
+        .section3 {
+            /* Таке враження ніби  red, orange розподілили простір до 50% рівномірно. Ну а далі по старій схемі - yellow найсильніший у точці 50% */
+            background: linear-gradient(90deg, red, orange, yellow 50%, green, blue, indigo 95%, violet);
+            height: 50vh;
+            margin-bottom: 20px;
+        }
+        .section4 {
+            /* В цій ситуації в точці 50% буде точка злому, тобто пряма лінія без плавного переходу */
+            background-image: linear-gradient(90deg, red 0%, orange, yellow, green 50%, blue 50%, indigo, violet);
+            height: 50vh;
+            margin-bottom: 20px;
+        }
+        .section5 {
+                /* Тут фішка в тому, що можна написати і так - green 25%, blue 25%, blue 50%, green 50%, green 75%, blue 75%); - Тобто не обовязково писати green 0% і blue 100% */
+            background-image: linear-gradient(90deg, green 0%, green 25%, blue 25%, blue 50%, green 50%, green 75%, blue 75%, blue 100% );
+            height: 50vh;
+            margin-bottom: 20px;
+        }
+
+        .section6 {
+            /* В данном случае цвет и нe выбивается из общепринятого порядка позиционирования.
+            Чтобы исправить ситуацию, пользовательский агент смещает его в точку 50% (место расположения самого близкого к нему предыдущего цвета).
+            Так задавати неправильно. Я просто описую, що буде робити браузер, якщо задавати неправильно*/
+            background-image: linear-gradient(90deg, red 0%, orange, yellow, green 50%, blue 40%, indigo, violet);
+            height: 50vh;
+            margin-bottom: 20px;
+        }
+
+        .section7 {
+            /* Тут те саме, що і в попередньому. indigo зміститься на 50% і буде брекпоінт, а green, blue проігноруються  */
+            background-image: linear-gradient(90deg, red 0%, orange, yellow 50%, green, blue, indigo 33%, violet);
+            height: 50vh;
+        }
+    </style>
+</head>
+<body>
+    <section class="section2">
+
+    </section>
+    <section class="section3">
+
+    </section>
+    <section class="section4">
+
+    </section>
+    <section class="section5">
+
+    </section>
+    <section class="section6">
+
+    </section>
+
+    <section class="section7">
+
+    </section>
+
+</body>
+</html>

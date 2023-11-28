@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>steps</title>
+    <style>
+        .section1 {
+            background-color: cornflowerblue;
+            width: 300px;
+            padding: 20px;
+            transition: all 1s steps(9, jump-start) .3s; /* steps(9, jump-start) розділить плавний transition на 9 кроків */
+        }
+        .section1:hover {
+            width: 700px;
+            color: white;
+            background-color: teal;
+        }
+
+
+        .section2 {
+            background-color: cornflowerblue;
+            width: 300px;
+            padding: 20px;
+            transition: all 1s steps(9, jump-end) .3s; /* Я не бачу різниці */
+        }
+        .section2:hover {
+            width: 700px;
+            color: white;
+            background-color: teal;
+        }
+    </style>
+</head>
+<body>
+    <section class="section1">
+        <div class="div1">
+            <p>width:jump-start</p>
+        </div>
+    </section>
+
+    <section class="section2">
+        <div class="div2">
+            <p>width:jump-end</p>
+        </div>
+    </section>
+</body>
+</html>

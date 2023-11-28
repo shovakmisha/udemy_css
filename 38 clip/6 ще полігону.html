@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        img {
+            width: 70%;
+        }
+
+        .image1 {
+            clip-path: polygon(25% 0, 100% 0, 100% 100%, 25% 100%, 0 50%); /* Пятикутник. Тут 5 точок */
+        }
+
+        .image2 {
+            clip-path: polygon(0% 0, 75% 0%, 100% 50%, 75% 100%, 0 100%);
+        }
+
+        .image3 {
+            clip-path: polygon(100% 0, 75% 50%, 100% 100%, 25% 100%, 0 50%, 25% 0); /* це 6-кутник і його відлік починається з правого верхнього краю - 100% 0 */
+        }
+    </style>
+</head>
+<body>
+    <img src="888.jpg" class="image1" alt="">
+
+    <img src="888.jpg" class="image2" alt="">
+
+    <img src="888.jpg" class="image3" alt="">
+</body>
+</html>

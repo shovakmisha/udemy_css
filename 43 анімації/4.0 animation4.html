@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ccs transition</title>
+	<style>
+        .case {
+            width: 690px;
+            outline: 4px solid black;
+
+        }
+
+        .section1 {
+            background-color: darkgoldenrod;
+            width: 300px;
+            padding: 20px;
+            animation: timing 3s infinite;
+        }
+
+        .div1 {
+            font-size: 30px;
+        }
+
+		@keyframes timing {
+			10% {
+				width: 50px;
+                background-color: crimson;
+			}
+			30% {
+                width: 150px;
+                background-color: teal;
+			}
+			45% {
+                width: 250px;
+                background-color: yellowgreen;
+			}
+			55% {
+				width: 350px;
+                background-color: rebeccapurple;
+			}
+            75% {
+                width: 550px;
+                background-color: navy;
+            }
+            90% {
+                width: 600px;
+                background-color: indianred;
+            }
+            100% { /* Якщо не вказати значення при 100%, 100% буде width: 300px; так як і в оригіналі. Але якщо вказати, воно його проскочить  */
+                width: 650px;
+                background-color: gold;
+            }
+        }
+
+	</style>
+</head>
+<body>
+<section class="case">
+	<section class="section1">
+		<div class="div1">
+			<p>width</p>
+		</div>
+	</section>
+</section>
+</body>
+</html>

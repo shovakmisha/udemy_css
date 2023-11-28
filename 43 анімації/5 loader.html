@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>loader</title>
+	<style>
+        .loader {
+            border-radius: 50%;
+            border: 16px solid lightgray;
+            border-top: 16px solid teal;
+            width: 120px;
+            height: 120px;
+            animation: spin 5s linear infinite;
+        }
+
+        .loader2 {
+            border-radius: 50%;
+            border: 16px solid lightgray;
+            border-top: 16px solid teal;
+            border-bottom: 16px solid teal;
+            width: 120px;
+            height: 120px;
+            animation: spin 5s linear infinite;
+        }
+
+		@keyframes spin {
+			from {
+				transform: rotate(0deg);
+			}
+            to {
+                transform: rotate(360deg);
+            }
+        }
+	</style>
+</head>
+<body>
+	<div class="loader"></div>
+	<div class="loader2"></div>
+</body>
+</html>

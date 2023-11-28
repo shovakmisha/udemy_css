@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ccs transition</title>
+    <style>
+        /* Коли я пишу свойство transition - це скорочення від
+         transition-property
+         transition-duration
+         transition-timing-function
+         transition-delay
+         transition: <transition-property> <transition-duration> <transition-timing-function> <transition-delay>  */
+
+        .section1 {
+            background-color: darkgoldenrod;
+            width: 300px;
+            padding: 20px;
+            transition: width 1s, background-color 1s; /* Також можна написати all 1s */
+        }
+        .section1:hover {
+            width: 600px;
+            background-color: blueviolet;
+        }
+
+        .div1 {
+            font-size: 30px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <section class="section1">
+        <div class="div1">
+            <p>width</p>
+        </div>
+    </section>
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>border radius and hover table</title>
+  <style>
+    .table-container {
+      background-color: slateblue;
+      padding: 20px;
+      display: flow-root;
+    }
+
+    .pad {
+      padding: 20px;
+    }
+
+    .col-1 {
+      float: left;
+      width: 100%;
+    }
+
+    .table {
+      margin: 0 auto;
+      width: 70%;
+      background-color: #fff;
+    }
+
+    table {
+      border-collapse: collapse;
+      border-spacing: 20px 5px;
+    }
+
+    th, td {
+      padding: 10px 0;
+      text-align: center;
+    }
+
+    th {
+      background-color: darkorange;
+      color: white;
+    }
+
+    tfoot td {
+      background-color: crimson;
+      color: white;
+    }
+
+    .title {
+      text-align: center;
+      color: #fff;
+      font-size: 20px;
+    }
+
+    tbody tr:nth-of-type(odd) {
+      background-color: teal;
+    }
+
+    @media screen and (max-width:768px) {
+
+      .table-container {
+        padding-left: 0;
+        background-color: transparent;
+      }
+
+      .pad {
+        padding-left: 0;
+      }
+
+      .title {
+        color: black;
+      }
+    }
+  </style>
+</head>
+<body>
+<section class="table-container">
+  <h3 class="title">A borderless table</h3>
+  <div class="col-1 pad">
+    <table class="table">
+      <thead>
+      <tr>
+        <th>Section 1</th>
+        <th>Section 2</th>
+        <th>Section 3</th>
+        <th>Section 4</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td data-label="Section 1">Data 1</td>
+        <td data-label="Section 2">Data 2</td>
+        <td data-label="Section 3">Data 3</td>
+        <td data-label="Section 4">Data 4</td>
+      </tr>
+      <tr>
+        <td data-label="Section 1">Data 1</td>
+        <td data-label="Section 2">Data 2</td>
+        <td data-label="Section 3">Data 3</td>
+        <td data-label="Section 4">Data 4</td>
+      </tr>
+      <tr>
+        <td data-label="Section 1">Data 1</td>
+        <td data-label="Section 2">Data 2</td>
+        <td data-label="Section 3">Data 3</td>
+        <td data-label="Section 4">Data 4</td>
+      </tr>
+      </tbody>
+      <tfoot>
+      <tr>
+        <td data-label="Section 1">Footer 1</td>
+        <td data-label="Section 2">Footer 2</td>
+        <td data-label="Section 3">Footer 3</td>
+        <td data-label="Section 4">Footer 4</td>
+      </tr>
+      </tfoot>
+    </table>
+  </div>
+</section>
+</body>
+</html>

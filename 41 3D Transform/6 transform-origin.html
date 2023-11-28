@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>transform-origin</title>
+    <style>
+        .transform {
+            border: 3px solid blue;
+            width: 200px;
+            height: 200px;
+            font-size: 20px;
+            text-align: center;
+            margin-bottom: 50px;
+            perspective: 400px;
+        }
+
+        .child-t {
+            background-color: blueviolet;
+            width: 150px;
+            height: 150px;
+            margin-left: 20px;
+        }
+
+        .child-t:hover {
+            transform: rotate3d(1, 1, 1, 45deg);
+            transform-origin: top right; /* center по дефолту. Це точка навколо якої буде крутитись фігура */
+        }
+
+
+        .scale {
+            border: 3px solid blue;
+            width: 200px;
+            height: 200px;
+            font-size: 20px;
+            text-align: center;
+            margin-bottom: 50px;
+            perspective: 400px;
+        }
+
+        .child-s {
+            background-color: blueviolet;
+            width: 150px;
+            height: 150px;
+            margin-left: 20px;
+        }
+
+        .child-s:hover {
+            transform: scale3d(2, 2, 1);
+            transform-origin: top left; /* Елемент буде скейлитись тільки вниз і вправо */
+        }
+    </style>
+</head>
+<body>
+<div class="transform">
+    <p class="child-t">transform-origin</p>
+</div>
+<div class="scale">
+    <p class="child-s">transform-origin</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>clip-path inset</title>
+    <style>
+        img {
+            width: 70%;
+        }
+        .image1 {
+            /* inset обрізає картинку у менший прямокутник */
+            clip-path: inset(5% 20% 15% 10%); /* top right bottom left */
+        }
+
+        .image2 {
+            clip-path: inset(5% 5% 5% 10% round 20% 20% 20% 20%); /* Закругли як border-radius на 20%. Тут принцип вказування як на border-radius */
+        }
+    </style>
+</head>
+<body>
+    <img src="888.jpg" class="image1" alt="">
+
+    <img src="888.jpg" class="image2" alt="">
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>scale3d</title>
+    <style>
+        .scale3d {
+            border: 3px solid blue;
+            width: 200px;
+            height: 200px;
+            font-size: 20px;
+            text-align: center;
+            margin-bottom: 50px;
+            perspective: 400px;
+            perspective-origin: left top;
+        }
+
+        .child-s {
+            background-color: blueviolet;
+            width: 150px;
+            height: 150px;
+            margin-left: 20px;
+        }
+
+        .child-s:hover {
+            transform: scaleZ(1.2); /* це не буде працювати. Так як і scale3d(1, 1, 2). Воно не збільшить елемент у 2 рази по осі z */
+        }
+    </style>
+</head>
+<body>
+<div class="scale3d">
+    <p class="child-s">scale3d</p>
+</div>
+</body>
+</html>

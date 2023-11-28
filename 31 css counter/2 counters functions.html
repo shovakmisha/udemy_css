@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>counters functions</title>
+    <style>
+        ol {
+            list-style-type: none;
+            counter-reset: lists;
+        }
+
+        li::before {
+            counter-increment: lists;
+            content: counters(lists, ".") " "; /* counters працює з вложеними списками. Через це тут буде 4.1, 4.2,... їх можна назвати підсписками */
+            color: red;
+        }
+
+    </style>
+</head>
+<body>
+
+    <ol>
+        <li>Great</li>
+        <li>Awesome</li>
+        <li>Brilliant</li>
+        <li>Good
+            <ol>
+                <li>Good</li>
+                <li>Handsome</li>
+                <li>Beautiful</li>
+                <li>Dance</li>
+            </ol>
+        </li>
+        <li>dreams</li>
+        <li>home</li>
+    </ol>
+</body>
+</html>

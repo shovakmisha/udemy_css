@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>bouncing onject</title>
+	<style>
+		.ball {
+			width: 100px;
+			height: 100px;
+            background-color: crimson;
+            border-radius: 50%;
+			animation: bounce 4s ease 3;
+		}
+
+		@keyframes bounce {
+			/* Тут треба розуміти, що при цьому коді плавно мяч буде йти тільки вниз - вверх це буде стрибок. Тому, що я не прописав йому плавне повернення */
+			from {
+				transform: translateY(0);
+			}
+			to {
+            	transform: translateY(45px);
+			}
+        }
+	</style>
+</head>
+<body>
+	<div class="ball">
+
+	</div>
+</body>
+</html>
